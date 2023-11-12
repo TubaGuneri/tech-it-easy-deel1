@@ -9,12 +9,17 @@ import bestSeller from "./assets/screenshots/tech-it-easy-best-seller-tv.jpeg";
 import checkicon from "./assets/check.png";
 import minusicon from "./assets/minus.png";
 
-// import viewGreen1b from "./helpers/viewGreen1b.js";
-
-
 function App() {
-
-  return (
+    function mostSold () {
+        console.log('Meest verkocht eerst');
+    }
+    function cheapestFirst() {
+        console.log('Goedkoopste eerst');
+    }
+  function sportFirst() {
+      console.log('Meest geschikt voor sport eerst');
+  }
+    return (
    <>
      <h1>Tech it easy dashbord</h1>
 
@@ -31,8 +36,6 @@ function App() {
                </div>
 
            </article>
-
-
        <h2>Best verkochte tv</h2>
        <article className="outer-best-seller-tv">
        <div className= "inner-best-seller-tv-img">
@@ -47,9 +50,13 @@ function App() {
                <img className= "check-icon" src={checkicon} alt=''/>  hdr
                <img className= "check-icon" src={checkicon} alt=''/>  bluetooth
                <img className= "minus" src={minusicon} alt=''/>  ambilight
-
            </div>
        </article>
+       <div style={{ position: 'fixed', bottom: '0', left: '50%', transform: 'translateX(-50%)' }}>
+           <button type="button" onClick={mostSold}>Meest verkocht eerst</button>
+           <button type="button" onClick={cheapestFirst}>Goedkoopste eerst</button>
+           <button type="button" onClick={sportFirst}>Meest geschikt voor sport eerst</button>
+       </div>
    </>
   )
 }
