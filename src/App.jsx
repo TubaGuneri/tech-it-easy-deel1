@@ -52,7 +52,7 @@ function App() {
                <img className= "minus" src={minusicon} alt=''/>  ambilight
            </div>
        </article>
-       <div style={{ position: 'fixed', bottom: '0', left: '50%', transform: 'translateX(-50%)' }}>
+       <div className="buttons">
            <button type="button" onClick={mostSold}>Meest verkocht eerst</button>
            <button type="button" onClick={cheapestFirst}>Goedkoopste eerst</button>
            <button type="button" onClick={sportFirst}>Meest geschikt voor sport eerst</button>

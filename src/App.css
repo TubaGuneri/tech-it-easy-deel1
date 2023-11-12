@@ -70,3 +70,11 @@ width: 80%;
     width: 20px;
     padding-left: 4px;
 }
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3em 5em 3em;
+    width: 100%;
+
+}
