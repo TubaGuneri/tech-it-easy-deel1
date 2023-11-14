@@ -8,6 +8,7 @@ import priceTv2b from "./helpers/priceTv2b.js";
 import bestSeller from "./assets/screenshots/tech-it-easy-best-seller-tv.jpeg";
 import checkicon from "./assets/check.png";
 import minusicon from "./assets/minus.png";
+import {bestSellingTv} from "./constants/inventory.js";
 
 function App() {
     function mostSold () {
@@ -39,7 +40,7 @@ function App() {
        <h2>Best verkochte tv</h2>
        <article className="outer-best-seller-tv">
        <div className= "inner-best-seller-tv-img">
-           <img className="best-sold-tv" src = {bestSeller} alt= "" />
+           <img className="best-sold-tv" src = {bestSellingTv.sourceImg} alt= "" />
        </div>
            <div className= "inner-best-seller-tv">
                <h3 className="tv-name">{generateTvName()}</h3>
