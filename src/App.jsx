@@ -5,10 +5,16 @@ import inSaleTvs1e from "./helpers/inSaleTvs1e.js";
 import availableScreenSize from "./helpers/availableScreenSize.js";
 import generateTvName from "./helpers/string2a.js";
 import priceTv2b from "./helpers/priceTv2b.js";
-import bestSeller from "./assets/screenshots/tech-it-easy-best-seller-tv.jpeg";
 import checkicon from "./assets/check.png";
 import minusicon from "./assets/minus.png";
-import {bestSellingTv} from "./constants/inventory.js";
+import {bestSellingTv, inventory} from "./constants/inventory.js";
+import getTvTypeName from "./helpers deel2/getTvTypeName.js";
+import getSoldTvs from "./helpers deel2/getSoldTvs.js";
+import listTvsForSport from "./helpers deel2/listTvsForSport.js";
+import bigTvs from "./helpers deel2/bigTvs.js";
+import tvAmbilight from "./helpers deel2/tvAmbilight.js";
+import getFoundTv from "./helpers deel2/getFoundTv.js";
+import getBigTvs from "./helpers deel2/bigTvs.js";
 
 function App() {
     function mostSold () {
@@ -20,10 +26,11 @@ function App() {
   function sportFirst() {
       console.log('Meest geschikt voor sport eerst');
   }
-    return (
-   <>
-     <h1>Tech it easy dashbord</h1>
+    // noinspection JSVoidFunctionReturnValueUsed
 
+    return (
+        <>
+     <h1>Tech it easy dashboard</h1>
            <h2>Verkoopoverzicht</h2>
            <article className="sale-summary">
                <div>
@@ -58,7 +65,39 @@ function App() {
            <button type="button" onClick={cheapestFirst}>Goedkoopste eerst</button>
            <button type="button" onClick={sportFirst}>Meest geschikt voor sport eerst</button>
        </div>
-   </>
+
+       <h2>deel2</h2>
+       <h3>opdracht 1a</h3>
+       {getTvTypeName()}
+
+       <h3>Opdracht 1b</h3>
+       {getSoldTvs()}
+
+       <h3>Opdracht1c</h3>
+      {getFoundTv()}
+
+       <h3>Opdracht 1d</h3>
+      {listTvsForSport()}
+
+       <h3>Opdracht 1e</h3>
+
+            {bigTvs()}
+
+       <h3>Opdracht 1f</h3>
+       {tvAmbilight()}
+
+            <h2>opdracht 2</h2>
+<h3>Merken</h3>
+
+           <div>
+               <ul>
+                   {inventory.map((tv) => {
+                       return <li key={tv.type}>{tv.brand}</li>
+                   })}
+               </ul>
+           </div>
+
+</>
   )
 }
 
