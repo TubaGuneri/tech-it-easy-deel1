@@ -14,7 +14,10 @@ import listTvsForSport from "./helpers deel2/listTvsForSport.js";
 import bigTvs from "./helpers deel2/bigTvs.js";
 import tvAmbilight from "./helpers deel2/tvAmbilight.js";
 import getFoundTv from "./helpers deel2/getFoundTv.js";
-import getBigTvs from "./helpers deel2/bigTvs.js";
+import showAllTvs from "./helpers deel2/showAllTvs.js";
+import tvPrices from "./helpers deel2/tvPrices.js";
+
+
 
 function App() {
     function mostSold () {
@@ -80,14 +83,14 @@ function App() {
       {listTvsForSport()}
 
        <h3>Opdracht 1e</h3>
-
             {bigTvs()}
 
        <h3>Opdracht 1f</h3>
        {tvAmbilight()}
 
             <h2>opdracht 2</h2>
-<h3>Merken</h3>
+            <h3>Opdracht 2a</h3>
+<h3>Merken die Tech It Easy heeft</h3>
 
            <div>
                <ul>
@@ -97,7 +100,27 @@ function App() {
                </ul>
            </div>
 
-</>
+            <h3>Opdracht 2b</h3>
+            <div className='showAllTvs'>
+              <h3>{showAllTvs()}</h3>
+                <p>{tvPrices()}</p>
+                {/*<p>{screenSizes()}</p>*/}
+
+            </div>
+
+            <h3>opdracht 2c</h3>
+            <div>
+                <ul>
+                    {inventory.map((tv, index)=> {
+                        if (tv.options.applicable === true) {
+                            return <li key={index}>{tv.options.name}</li>;
+                        };
+                    })}
+                </ul>
+            </div>
+
+           {/* de rest van deel 2 ontbreekt ivm tijdgebrek.*/}
+           </>
   )
 }
 
