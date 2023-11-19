@@ -1,0 +1,80 @@
+h1{
+    font-size: 50px;
+}
+.sale-summary{
+    display: flex;
+    justify-content: space-around;
+    padding: 1em 2em;
+    text-align: center;
+
+
+}
+
+.sold-tvs {
+    font-size:38px;
+    color: #4e9a8e;
+    border: solid 3px #99c3be;
+    background-color: #ccece6;
+    border-radius: 5px;
+    padding: 2em;
+    height: 10em;
+}
+
+
+.bought-tvs {
+    font-size: 38px;
+    color: #538096;
+    border: solid 3px #538096;
+    background-color: #f0f4f6;
+    border-radius: 5px;
+    padding: 2em;
+    height: 10em;
+}
+
+.to-sell-tvs {
+    color: #cf5737;
+    font-size: 38px;
+    border: solid 3px #cf5737;
+    background-color: #f9eeeb;
+    border-radius: 5px;
+    padding: 2em;
+    height: 10em;
+}
+
+h2{
+    font-size: 42px;
+}
+.outer-best-seller-tv {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: dashed black 2px;
+    padding: 3em 2em;
+    margin: 2em 2em;
+}
+h3 {
+    font-size: 24px;
+}
+.price {
+    font-size: 26px;
+}
+.screen-size {
+    font-size: 20px;
+}
+
+.best-sold-tv {
+width: 80%;
+}
+.check-icon,.minus {
+    width: 20px;
+    padding-left: 4px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3em 5em 3em;
+    width: 100%;
+
+}
